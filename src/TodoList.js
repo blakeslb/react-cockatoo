@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoListItem from './TodoListItem';
 
 const todoList = [
     {
@@ -24,11 +25,11 @@ const todoList = [
     },
   ];
 
-const TodoList = () => {
+const TodoList = (todo) => {
     return (
         <ul>
-            {todoList.map(function (item) {
-                return <li key={item.listID}>{item.title}</li>;
+            {todoList.map((item) => {
+                return <TodoListItem key = {item.objectID} item = {item} />;
             })}
         </ul>
     );
