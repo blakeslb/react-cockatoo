@@ -13,7 +13,10 @@ function App() {
   return (
     <div>
       <h1>{getTitle("Todo List")}</h1>
-      <AddTodoForm onAddtodo={setNewTodo} />
+      <AddTodoForm setNewTodo={setNewTodo} />
+      {/* This is what I previously had and got stuck on in instructions:
+      <AddTodoForm onAddtodo={setNewTodo} /> */}
+
       <p>
         {newTodo}
       </p>
